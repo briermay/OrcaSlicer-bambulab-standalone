@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-SCRIPT_DIR="$(CDPATH= cd -- "$(dirname -- "$0")" && pwd)"
-PROJECT_DIR="$(CDPATH= cd -- "$SCRIPT_DIR/../.." && pwd)"
+SCRIPT_DIR="$(CDPATH=cd -- "$(dirname -- "$0")" && pwd)"
+PROJECT_DIR="$(CDPATH=cd -- "$SCRIPT_DIR/../.." && pwd)"
 RUNTIME_ROOT="$PROJECT_DIR/tools/pjarczak_bambu_linux_host/runtime/linux-x86_64"
 PROPRIETARY_DIR="$PROJECT_DIR/src/slic3r/Utils/PJarczakLinuxBridge/runtime/proprietary"
 
