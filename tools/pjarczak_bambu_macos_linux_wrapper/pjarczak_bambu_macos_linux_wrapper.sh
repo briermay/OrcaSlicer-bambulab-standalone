@@ -22,6 +22,7 @@ if [ -n "${PJARCZAK_MAC_DOCKER_IMAGE:-}" ]; then
 fi
 
 if [ -n "${PJARCZAK_MAC_LIMA_INSTANCE:-}" ]; then
+# shellcheck disable=SC2086
     exec limactl shell "$PJARCZAK_MAC_LIMA_INSTANCE" -- /bin/sh -lc \
         "export PJARCZAK_BAMBU_PLUGIN_DIR=$(printf %s \"$PLUGIN_DIR\"); export PJARCZAK_BAMBU_NETWORK_SO=$(printf %s \"$PLUGIN_DIR/libbambu_networking.so\"); export PJARCZAK_BAMBU_SOURCE_SO=$(printf %s \"$PLUGIN_DIR/libBambuSource.so\"); export PJARCZAK_BAMBU_LIVE555_SO=$(printf %s \"$PLUGIN_DIR/liblive555.so\"); exec $(printf %s \"$HOST_PATH\")"
 fi
