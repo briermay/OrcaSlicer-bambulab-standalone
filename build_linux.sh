@@ -467,7 +467,7 @@ if [ ! -f "./scripts/linux.d/${DISTRIBUTION}" ] ; then
     echo "Please resolve dependencies manually and contribute a script for your distribution to upstream."
     exit 1
 else
-    echo "resolving system dependencies for distribution "${DISTRIBUTION}" ..."
+    echo "resolving system dependencies for distribution \"${DISTRIBUTION}\" ..."
     # shellcheck source=/dev/null
     source "./scripts/linux.d/${DISTRIBUTION}"
 fi
