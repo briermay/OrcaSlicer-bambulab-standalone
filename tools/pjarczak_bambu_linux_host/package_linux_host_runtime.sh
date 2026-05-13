@@ -1,8 +1,10 @@
 #!/usr/bin/env bash
 set -euo pipefail
 # shellcheck disable=SC037
+# shellcheck disable=SC1007
 SCRIPT_DIR="$(CDPATH= cd -- "$(dirname -- "$0")" && pwd)"
 # shellcheck disable=SC037
+# shellcheck disable=SC1007
 PROJECT_DIR="$(CDPATH= cd -- "$SCRIPT_DIR/../.." && pwd)"
 RUNTIME_ROOT="$PROJECT_DIR/tools/pjarczak_bambu_linux_host/runtime/linux-x86_64"
 PROPRIETARY_DIR="$PROJECT_DIR/src/slic3r/Utils/PJarczakLinuxBridge/runtime/proprietary"
