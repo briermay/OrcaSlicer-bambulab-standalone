@@ -17,6 +17,7 @@ while [[ $# -gt 0 ]]; do
             shift 2
             ;;
         -PluginCacheDir)
+        # shellcheck disable=SC2034
             PLUGIN_CACHE_DIR="${2:-}"
             shift 2
             ;;
@@ -47,7 +48,8 @@ trim_file() {
     if [[ ! -f "$path" ]]; then
         return 1
     fi
-    LC_ALL=C tr -d '' < "$path" | head -n 1 | sed 's/^[[:space:]]*//;s/[[:space:]]*$//'
+    LC_ALL=C tr -d '
+' < "$path" | head -n 1 | sed 's/^[[:space:]]*//;s/[[:space:]]*$//'
 }
 
 find_limactl() {
