@@ -17,6 +17,7 @@ while [[ $# -gt 0 ]]; do
             shift 2
             ;;
         -PluginCacheDir)
+        # shellcheck disable=SC2034
             PLUGIN_CACHE_DIR="${2:-}"
             shift 2
             ;;
